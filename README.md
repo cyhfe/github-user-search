@@ -1,10 +1,17 @@
 # Github user search
 
+- Dark
+
+![](./dark.png)
+
 使用 github user api,通过 fetch 获取数据展示页面.
 
 使用 react 构建 UI 界面
 
 emotion 实现样式以及主题切换
+
+- Light
+  ![](./light.png)
 
 ## 主题切换
 
