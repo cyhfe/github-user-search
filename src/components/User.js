@@ -147,7 +147,6 @@ const StyledInfo = styled.div`
 
 const StyledInfoItem = styled.div`
   display: flex;
-  /* justify-content: center; */
   align-items: self-start;
   gap: 1rem;
 `
