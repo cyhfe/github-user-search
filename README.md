@@ -14,6 +14,11 @@
 
 emotion 实现样式以及主题切换
 
+## Links
+
+- [live](https://cyh-github-user-search.netlify.app/)
+- [github](https://github.com/cyhfe/github-user-search)
+
 ## 主题切换
 
 ```js
