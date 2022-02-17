@@ -11,9 +11,9 @@ export async function fetchUser(username) {
     if (response.ok) {
       return Promise.resolve(data)
     } else {
-      Promise.reject(data)
+      return Promise.reject(data)
     }
   } catch (error) {
-    console.log(error)
+    return Promise.reject(error)
   }
 }

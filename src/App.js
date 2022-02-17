@@ -17,7 +17,7 @@ function App() {
     run,
   } = useAsync()
   useEffect(() => {
-    run(fetchUser(username))
+    // run(fetchUser(username))
   }, [username])
   return (
     <div className="App">
