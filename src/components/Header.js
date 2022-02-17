@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
+import { IconMoon, IconSun } from "./Icons"
 function Header() {
   return (
     <div
@@ -9,7 +10,10 @@ function Header() {
       `}
     >
       <div>devfinder</div>
-      <div>Light</div>
+      <div>
+        <span>DARK</span>
+        {<IconMoon />}
+      </div>
     </div>
   )
 }
