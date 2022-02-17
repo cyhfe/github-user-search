@@ -17,7 +17,7 @@ function UserInfo({ username }) {
 
   useEffect(() => {
     run(fetchUser(username))
-  }, [username])
+  }, [username, run])
   return (
     <div>
       {isLoading && <div>loading...</div>}
