@@ -10,3 +10,8 @@ body {
   margin: 0;
   font-family: "Space Mono", monospace;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}

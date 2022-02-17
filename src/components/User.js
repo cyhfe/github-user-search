@@ -1,12 +1,7 @@
-import {
-  IconCompany,
-  IconLocation,
-  IconMoon,
-  IconSearch,
-  IconSun,
-  IconTwitter,
-  IconWebsite,
-} from "./Icons"
+/** @jsxImportSource @emotion/react */
+import { Global, css, useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
+import { IconCompany, IconLocation, IconTwitter, IconWebsite } from "./Icons"
 
 const user = {
   login: "getify",
@@ -45,16 +40,39 @@ const user = {
 
 function User() {
   return (
-    <div>
-      <div className="avatar">
-        <div className="avatar-img">
-          <img src={user.avatar_url} alt="avatar" />
+    <StyledCard>
+      <StyledHeader>
+        <div
+          className="avatar-img"
+          css={css`
+            width: 120px;
+            height: 120px;
+            margin-right: 1rem;
+          `}
+        >
+          <img
+            src={user.avatar_url}
+            alt="avatar"
+            css={css`
+              border-radius: 999px;
+              object-fit: cover;
+            `}
+          />
         </div>
-        <div>{user.name}</div>
-        <div>@{user.login}</div>
-      </div>
+        <div>
+          <h2
+            css={css`
+              margin: 0.5rem auto;
+            `}
+          >
+            {user.name}
+          </h2>
+          <div>@{user.login}</div>
+          <div>Joined {new Date(user.created_at).toLocaleDateString()}</div>
+        </div>
+      </StyledHeader>
       <div className="bio">{user.bio}</div>
-      <div className="repo">
+      <StyledRepo>
         <div>
           <div>Repos</div>
           <div>{user.public_repos}</div>
@@ -67,28 +85,77 @@ function User() {
           <div>Following</div>
           <div>{user.following}</div>
         </div>
-      </div>
-      <div className="info">
-        <div>
-          <IconLocation />
+      </StyledRepo>
+      <StyledInfo>
+        <StyledInfoItem>
+          <StyledIcon>
+            <IconLocation />
+          </StyledIcon>
           {user.location}
-        </div>
-        <div>
-          <IconWebsite />
+        </StyledInfoItem>
+        <StyledInfoItem>
+          <StyledIcon>
+            <IconWebsite />
+          </StyledIcon>
           {user.blog}
-        </div>
+        </StyledInfoItem>
 
-        <div>
-          <IconTwitter />
+        <StyledInfoItem>
+          <StyledIcon>
+            <IconTwitter />
+          </StyledIcon>
           {user.twitter_username}
-        </div>
-        <div>
-          <IconCompany />
+        </StyledInfoItem>
+        <StyledInfoItem>
+          <StyledIcon>
+            <IconCompany />
+          </StyledIcon>
           {user.company}
-        </div>
-      </div>
-    </div>
+        </StyledInfoItem>
+      </StyledInfo>
+    </StyledCard>
   )
 }
+
+const StyledHeader = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+`
+
+const StyledCard = styled.div`
+  background-color: ${(props) => props.theme.colors.backgroundContent};
+  padding: 2rem;
+  border-radius: 18px;
+`
+
+const StyledRepo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: ${(props) => props.theme.colors.background};
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+`
+
+const StyledInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`
+
+const StyledInfoItem = styled.div`
+  display: flex;
+  /* justify-content: center; */
+  align-items: self-start;
+  gap: 1rem;
+`
+
+const StyledIcon = styled.div`
+  width: 20px;
+  display: flex;
+  justify-content: center;
+`
 
 export default User
