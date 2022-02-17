@@ -3,7 +3,7 @@ import { Global, css, useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
 import { IconCompany, IconLocation, IconTwitter, IconWebsite } from "./Icons"
 
-const user = {
+const data = {
   login: "getify",
   id: 150330,
   node_id: "MDQ6VXNlcjE1MDMzMA==",
@@ -38,7 +38,7 @@ const user = {
   updated_at: "2022-02-17T00:10:11Z",
 }
 
-function User() {
+function User({ user }) {
   return (
     <StyledCard>
       <StyledHeader>

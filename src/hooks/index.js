@@ -91,6 +91,8 @@ export default function useAsync(initialState) {
     isIdle,
     isLoading,
 
+    safeDispatch,
+
     run,
   }
 }
