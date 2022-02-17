@@ -26,6 +26,7 @@ const StyledForm = styled.form`
   border-radius: 12px;
   background-color: ${(props) => props.theme.colors.backgroundContent};
   border-radius: 12px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
 `
 
 const StyledInput = styled.input`
@@ -46,6 +47,8 @@ const StyledButton = styled.input`
   background-color: #0079ff;
   color: white;
   margin: 10px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
   :hover {
     background-color: #3290fc;
   }

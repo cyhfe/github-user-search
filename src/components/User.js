@@ -127,6 +127,7 @@ const StyledCard = styled.div`
   background-color: ${(props) => props.theme.colors.backgroundContent};
   padding: 2rem;
   border-radius: 18px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
 `
 
 const StyledRepo = styled.div`
