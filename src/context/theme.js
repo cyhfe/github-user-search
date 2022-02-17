@@ -5,14 +5,16 @@ import { createContext, useContext, useState } from "react"
 const themes = {
   light: {
     colors: {
+      colorHightlight: "black",
       color: "#4B6A9B",
-      primary: "deeppink",
       background: "#F6F8FF",
+      backgroundContent: "#FEFEFE",
     },
   },
   dark: {
     colors: {
-      color: "white",
+      colorHightlight: "white",
+      color: "#f1f1f1",
       background: "#141D2F",
       backgroundContent: "#1E2A47",
     },

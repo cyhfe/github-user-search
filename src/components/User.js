@@ -91,26 +91,26 @@ function User() {
           <StyledIcon>
             <IconLocation />
           </StyledIcon>
-          {user.location}
+          {user.location ?? "Not available"}
         </StyledInfoItem>
         <StyledInfoItem>
           <StyledIcon>
             <IconWebsite />
           </StyledIcon>
-          {user.blog}
+          {user.blog ?? "Not available"}
         </StyledInfoItem>
 
         <StyledInfoItem>
           <StyledIcon>
             <IconTwitter />
           </StyledIcon>
-          {user.twitter_username}
+          {user.twitter_username ?? "Not available"}
         </StyledInfoItem>
         <StyledInfoItem>
           <StyledIcon>
             <IconCompany />
           </StyledIcon>
-          {user.company}
+          {user.company ?? "Not available"}
         </StyledInfoItem>
       </StyledInfo>
     </StyledCard>
@@ -120,7 +120,7 @@ function User() {
 const StyledHeader = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 `
 
 const StyledCard = styled.div`
@@ -135,7 +135,7 @@ const StyledRepo = styled.div`
   text-align: center;
   background-color: ${(props) => props.theme.colors.background};
   padding: 1rem;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   border-radius: 12px;
 `
 
@@ -147,7 +147,7 @@ const StyledInfo = styled.div`
 
 const StyledInfoItem = styled.div`
   display: flex;
-  align-items: self-start;
+  align-items: center;
   gap: 1rem;
 `
 
@@ -155,6 +155,7 @@ const StyledIcon = styled.div`
   width: 20px;
   display: flex;
   justify-content: center;
+  filter: brightness(100%);
 `
 
 export default User
